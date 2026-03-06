@@ -1,4 +1,4 @@
-import json,pickle,os
+import json,pickle,os,time,datetime
 from Configuration import _DEFAULT_CONFIGURATION
 from post_processing.stat_accumu import StatFlowDataset,StatFrame,_MISSING_NO_STATIC_FRAME
 from post_processing.stat_json import from_statflow,from_refmap_entry
@@ -46,7 +46,20 @@ def update_metainf():
             with open(file=os.path.join(config.pth_to_endpoint_root,"meta",idd+".json"), mode="w") as target_file:
                 json.dump(from_refmap_entry(entry), target_file)
 
+def push_to_github():
+    global config
+    commit_message = f"Auto update: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    return os.system(config.pth_to_pusher_batch_abs + " \"" + commit_message + '\"')
+
+def update_all():
+    try:
+        update_all_preprints()
+        update_metainf()
+        time.sleep(2) # await for filesystem resource release
+        push_to_github()
+        return True
+    except Exception as ignored:
+        return False
 
 if __name__ == "__main__":
-    update_all_preprints()
-    update_metainf()
+    push_to_github()
