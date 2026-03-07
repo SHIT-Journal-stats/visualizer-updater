@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccdaac90-c96e-43cb-b321-a0bdd6061264" name="Changes" comment="Initial commit&#10;init.">
-      <change afterPath="$PROJECT_DIR$/_lifecycle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration.py" afterDir="false" />
+    <list default="true" id="ccdaac90-c96e-43cb-b321-a0bdd6061264" name="Changes" comment="Auto push+lifecycle&#10;feat.">
+      <change beforePath="$PROJECT_DIR$/_lifecycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/_lifecycle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post_processing/stat_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/post_processing/stat_json.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/update.py" beforeDir="false" afterPath="$PROJECT_DIR$/update.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,6 +119,15 @@
       <option name="presentableId" value="Default" />
       <updated>1772815381006</updated>
     </task>
+    <task id="LOCAL-00001" summary="Auto push+lifecycle&#10;feat.">
+      <option name="closed" value="true" />
+      <created>1772839925386</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772839925386</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,5 +140,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Auto push+lifecycle&#10;feat." />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto push+lifecycle&#10;feat." />
   </component>
 </project>

@@ -1,5 +1,7 @@
 from post_processing.stat_accumu import StatFrame
 
+_MISSING_NO_READABLE = "DELETED/MISSINGNO"
+
 def from_statflow(statflow: list[StatFrame]) -> list[dict]:
     result = []
     for stat in statflow:
@@ -45,3 +47,6 @@ def from_refmap_entry(entry: dict) -> dict:
         "latrine_sort_key": entry["latrine_sort_key"],
     }
     return future
+
+def as_readable(entry: dict) -> str:
+    return f"{entry["manuscript_title"]}<{entry["viscosity"]}> - {entry["author_name"]} | {str(entry["co_authors"])})"

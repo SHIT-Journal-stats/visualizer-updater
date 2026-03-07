@@ -7,6 +7,7 @@ def cycle_with_interval():
     while True:
         while not update_all():
             pass
+        print("forward")
         time.sleep(config.interval)
 
 if __name__ == "__main__":
