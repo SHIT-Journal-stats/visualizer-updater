@@ -49,4 +49,4 @@ def from_refmap_entry(entry: dict) -> dict:
     return future
 
 def as_readable(entry: dict) -> str:
-    return f"{entry["manuscript_title"]}<{entry["viscosity"]}> - {entry["author_name"]} | {str(entry["co_authors"])})"
+    return f"{entry["manuscript_title"]}<{entry["viscosity"]}> - {entry["author_name"]} | {str([coauthor["name"]] for coauthor in entry["co_authors"])})"
